@@ -1,5 +1,13 @@
+import java.util.function.Function;
+
 public class Ch01 {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Function<String, Integer> fnString = String::length;
+
+        //var n = null;
+        var n = "";
+
+        System.out.println("Fn: " + String.format(n));
     }
 }
