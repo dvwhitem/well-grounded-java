@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.function.Function;
 
 public class Ch01 {
@@ -9,5 +10,9 @@ public class Ch01 {
         var n = "";
 
         System.out.println("Fn: " + String.format(n));
+
+        var list = List.of("x", "y");
+
+        System.out.println("List: " + list);
     }
 }
