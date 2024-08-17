@@ -1,5 +1,5 @@
-public class Main {
+public class StackTraceDemo {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        var i = Integer.parseInt("Error");
     }
 }
