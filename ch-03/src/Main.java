@@ -24,6 +24,23 @@ public class Main {
         };
 
         System.out.println("Month: " + month);
+
+        FXOrder fxOrder = new FXOrder(0, 2.2, -1);
+    }
+}
+
+
+record FXOrder(int units, double price, int ttl) {
+    FXOrder {
+        if(units < 1) {
+            throw new IllegalArgumentException("FXOrder units must be positive");
+        }
+        if(ttl < 0) {
+            throw new IllegalArgumentException("FXOrder TTL must be positive, or 0 for market orders");
+        }
+        if(price <= 0.0) {
+            throw new IllegalArgumentException("FXOrder price must be positive");
+        }
     }
 }
 
