@@ -1,5 +1,7 @@
 public class Main {
+
     public static void main(String[] args) {
+
         int monthNum = 12;
 
         String message = switch (monthNum) {
@@ -25,7 +27,19 @@ public class Main {
 
         System.out.println("Month: " + month);
 
-        FXOrder fxOrder = new FXOrder(0, 2.2, -1);
+        FXOrder fxOrder = new FXOrder(2, 2.2, 1);
+
+        // pattern matching instanceof
+        Object someObject = "TEST";
+
+        var msg = switch (someObject) {
+            case byte b -> "This is a byte value";
+            case int i -> "This is an integer argument";
+            case String s -> "This is a string argument";
+            case null, default -> "Unknown type";
+        };
+
+        System.out.println("Message: " + msg);
     }
 }
 

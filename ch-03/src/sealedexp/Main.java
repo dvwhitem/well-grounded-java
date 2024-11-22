@@ -4,9 +4,10 @@ import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
-        CurrencyPair currencyPair = new CurrencyPair("USD", "EUR");
 
-        FXOrder marketOrder = new MarketOrder(
+        CurrencyPair currencyPair = new CurrencyPair("USD", "EU");
+
+        sealedexp.FXOrder marketOrder = new MarketOrder(
                 1000,
                 currencyPair,
                 Side.BUY,
@@ -14,7 +15,7 @@ public class Main {
                 true
         );
 
-        FXOrder limitOrder = new LimitOrder(
+        sealedexp.FXOrder limitOrder = new LimitOrder(
                 500,
                 currencyPair,
                 Side.SELL,
@@ -28,5 +29,3 @@ public class Main {
         System.out.println(limitOrder);
     }
 }
-
-
