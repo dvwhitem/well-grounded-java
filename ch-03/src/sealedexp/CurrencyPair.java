@@ -1,4 +1,3 @@
 package sealedexp;
 
-public class CurrencyPair {
-}
+public record CurrencyPair(String base, String quote) {}
